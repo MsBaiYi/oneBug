@@ -1,7 +1,7 @@
 <template>
   <h1>This is an Home page</h1>
   <div>{{count}}</div>
-  <button @click="count++">count++</button>
+  <button @click="add()">count++</button>
 </template>
 
 <script>
@@ -17,6 +17,11 @@ export default {
   },
   unmounted() {
     console.log('home 销毁')
+  },
+  methods: {
+    add() {
+      this.count++
+    }
   }
 }
 </script>
